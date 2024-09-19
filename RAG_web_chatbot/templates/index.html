@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RAG 챗봇</title>
+    <!-- 스타일시트 연결 -->
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>RAG 챗봇</h1>
+      <!-- 파일 업로드 섹션 -->
+      <div id="file-upload">
+        <!-- 파일 입력 필드: 허용된 파일 형식 지정 -->
+        <input
+          type="file"
+          id="file-input"
+          accept=".txt,.pdf,.docx,.csv,.html,.md,.odt,.pptx,.epub,.jpg,.jpeg,.png,.eml,.json,.rtf,.xml,.enex,.xlsx,.xls"
+        />
+        <button id="upload-btn">파일 업로드</button>
+      </div>
+      <!-- 채팅 인터페이스 컨테이너 -->
+      <div id="chat-container">
+        <!-- 메시지 표시 영역 -->
+        <div id="chat-messages"></div>
+        <!-- 사용자 입력 영역 -->
+        <div id="user-input">
+          <input
+            type="text"
+            id="user-message"
+            placeholder="메시지를 입력하세요..."
+          />
+          <button id="send-btn">전송</button>
+        </div>
+      </div>
+    </div>
+    <!-- 로딩 오버레이: 파일 처리 중 표시 -->
+    <div id="loading-overlay" class="hidden">
+      <div class="spinner"></div>
+      <p>파일을 처리하고 있습니다...</p>
+    </div>
+    <!-- 자바스크립트 파일 연결 -->
+    <script src="/static/script.js"></script>
+  </body>
+</html>
